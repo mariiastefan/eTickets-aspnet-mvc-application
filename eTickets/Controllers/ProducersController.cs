@@ -15,7 +15,9 @@ namespace eTickets.Controllers
         public async Task<IActionResult>Index()
         {
             var allProducers= await _context.Producers.ToListAsync();
-            return View();
+            return View(allProducers);
+            // you cand also define a new name for the view and the code will be like this:
+            //return View(newName,allProducers);
         }
     }
 }
